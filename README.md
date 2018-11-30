@@ -7,7 +7,7 @@ The version that is discussed in Ref. [2] is on branch arXiv1705p07855.
 The version that is discussed in Ref. [3] is on branch arXiv1804p02926.
 
 
-## How the code was used to train and evaluate a decoder as discussed in Ref. [3]
+## How the code was used in Ref. [3] to train and evaluate a decoder
 1) First SQLite databases with data according to the specifications in data_format.md were generated. Suitable pre-processing of the input data was crucial and depends on the quantum circuit and is described in [3].<br>
 2) Then notebooks of the form training.ipynb were used to run the training pipeline. The training progress was monitored using TensorBoard.<br>
 3) After the training was completed, notebooks of the form evaluation.ipynb were used to evaluate the trained decoder on the test datasets.
