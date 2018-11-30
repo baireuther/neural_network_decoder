@@ -1,15 +1,16 @@
 # Readme
 
-This software implements a decoder for small stabilizer codes, in particular for color codes and surface codes, based on a combination of recurrent and feedforward neural networks. The neural networks are implemented using the TensorFlow library [1]. The algorithm is discussed in [2, 3].
+A decoder for small topological surface and color codes, and potentially other stabilizer codes, when encoding a single logical qubit. The decoder is based on a combination of recurrent and feedforward neural networks. The neural networks are implemented using the TensorFlow library [1]. The algorithm and training procedure are discussed in [2, 3]. Note that, unlike more conventional algorithms, this decoder needs to be trained. Even after training, there is no way to know for certain if the decoder will perform accurately or at all. All one can do is is gather empirical evidence by testing it on a separate test dataset.
 
 The version that is discussed in Ref. [2] is on branch arXiv1705p07855.
 
 The version that is discussed in Ref. [3] is on branch arXiv1804p02926.
 
-## How to use the code to train and evaluate a decoder as discussed in Ref. [3]
-1) Generate SQLite databases with your data according to the specifications in data_format.md.<br>
-2) Adjust the notebook training.ipynb to your needs and run the training pipeline. Optionally, monitor the training progress using TensorBoard.<br>
-3) After the training is completed, adjust and run the notebook evaluation.ipynb to evaluate the trained decoder on a your dataset.
+
+## How the code was used to train and evaluate a decoder as discussed in Ref. [3]
+1) First SQLite databases with data according to the specifications in data_format.md were generated. Suitable pre-processing of the input data was crucial and depends on the quantum circuit and is described in [3].<br>
+2) Then notebooks of the form training.ipynb were used to run the training pipeline. The training progress was monitored using TensorBoard.<br>
+3) After the training was completed, notebooks of the form evaluation.ipynb were used to evaluate the trained decoder on the test datasets.
 
 
 ## References
