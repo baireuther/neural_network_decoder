@@ -1,9 +1,11 @@
 # ========================================================================
-# This file is part of a decoder for small stabilizer codes, in particular
-# color and surface codes, based on a combination of recurrent and
+# This file is part of a decoder for small topological surface and color
+# codes, and potentially other stabilizer codes, when encoding a single
+# logical qubit. The decoder is based on a combination of recurrent and
 # feedforward neural networks.
 #
-# Copyright 2017-2018 Paul Baireuther. All Rights Reserved.
+# Copyright (c) 2017-2018, Paul Baireuther
+# All rights reserved.
 # ========================================================================
 
 
